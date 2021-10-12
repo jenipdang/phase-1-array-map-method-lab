@@ -11,6 +11,27 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+// const titleCased = () => {
+//   return tutorials
+// }
+
+// function titleCased() {
+//   return tutorials.map(function (tutorial) {
+//     let tutorialWords = tutorial.split(' ');
+// 	let capWords = tutorialWords.map(function(word){
+// 	 return word.charAt(0).toUpperCase() + word.slice(1);
+// 	})
+//     for (let i = 0; i < tutorial.length; i++) {
+//       tutorial[i] = tutorial[i].charAt(0).toUpperCase() + tutorial[i].slice(1);
+//     }
+//     return capWords.join(' ');
+//   });
+// }
+
 const titleCased = () => {
-  return tutorials
+	return tutorials.map(tutorial => {
+		let tutorialWords = tutorial.split(' ');
+		let capWords = tutorialWords.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+		return capWords.join(' ');
+	})
 }
